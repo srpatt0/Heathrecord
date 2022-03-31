@@ -1,0 +1,156 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+    <h1>Place fitness Trainer appointment</h1>
+    <div class="form-group">
+        <label for="exampleInputname">Name</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="Name">
+        <small class="form-text text-muted"
+            *ngIf="contactForm.controls.name.touched && contactForm.controls.name.errors?.required">
+            Please enter first name.!
+        </small>
+    </div>
+
+<br/>
+
+    <div class="form-group">
+        <label for="exampleInputage">Age</label>
+        <input type="text" class="form-control" formControlName="age" placeholder="Age">
+        <small class="form-text text-muted"
+            *ngIf="contactForm.controls.age.touched && contactForm.controls.age.errors?.required">
+            Please enter Age!
+        </small>
+    </div>
+<br/>
+
+    <div class="form-group">
+        <label for="exampleInputphonenumber">Phone Number</label>
+        <input type="number" class="form-control" formControlName="phonenumber" placeholder="Phone Number">
+        <small class="form-text text-muted"
+            *ngIf="contactForm.controls.phonenumber.touched && contactForm.controls.phonenumber.errors?.required">
+            Please enter phone number.!
+        </small>
+    </div>
+<br/>
+    <div class="form-group">
+        <label for="exampleInputemail">Email</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="Email">
+        <small class="form-text text-muted"
+            *ngIf="contactForm.controls.email.touched && contactForm.controls.email.errors?.required">
+            Please enter email.!
+        </small>
+        <small class="form-text text-muted"
+            *ngIf="contactForm.controls.email.touched && contactForm.controls.email.errors?.email">
+            Enter the valid email .!
+        </small>
+    </div>
+<br/>
+    <div class="form-group">
+        <label for="exampleInputmessage">Address1</label>
+        <input type="text" class="form-control" formControlName="Address1" placeholder="Address1">
+        <small class="form-text text-muted"
+            *ngIf="contactForm.controls.message.touched && contactForm.controls.message.errors?.required">
+            Please enter Address1.!
+        </small>
+
+    </div>
+<br/>
+    <div class="form-group">
+        <label for="exampleInputmessage">Address2</label>
+        <input type="text" class="form-control" formControlName="Address2" placeholder="Address2">
+        <small class="form-text text-muted"
+            *ngIf="contactForm.controls.message.touched && contactForm.controls.message.errors?.required">
+            Please enter Address2.!
+        </small>
+
+    </div>
+<br/>
+    <div class="form-group">
+        <label for="exampleInputmessage">City</label>
+        <input type="text" class="form-control" formControlName="city" placeholder="City">
+        <small class="form-text text-muted"
+            *ngIf="contactForm.controls.message.touched && contactForm.controls.message.errors?.required">
+            Please enter City.!
+        </small>
+
+    </div>
+<br/>
+    <div class="form-group">
+        <label for="exampleInputname">State</label>
+        <input type="text" class="form-control" formControlName="state" placeholder="State">
+        <small class="form-text text-muted"
+            *ngIf="contactForm.controls.name.touched && contactForm.controls.name.errors?.required">
+            Please enter first State.!
+        </small>
+    </div>
+<br/>
+    <div class="form-group">
+        <label for="exampleInputname">Country</label>
+        <input type="text" class="form-control" formControlName="country" placeholder="Country">
+        <small class="form-text text-muted"
+            *ngIf="contactForm.controls.name.touched && contactForm.controls.name.errors?.required">
+            Please enter first Country.!
+        </small>
+    </div>
+<br/>
+    <div class="form-group">
+        <label for="exampleInputname">PIN code</label>
+        <input type="text" class="form-control" formControlName="pin" placeholder="PinCode">
+        <small class="form-text text-muted"
+            *ngIf="contactForm.controls.name.touched && contactForm.controls.name.errors?.required">
+            Please enter first PIN code.!
+        </small>
+    </div>
+<br/>
+
+<div class="form-group">
+<p>Trainee Preference:</p>
+  <input type="radio" id="mt" name="fav_language" value="MaleTrainer">
+  <label for="html">Male Trainer</label><br>
+  <input type="radio" id="ft" name="fav_language" value="FemaleTrainer">
+  <label for="css">Female Trainer</label><br>
+  <input type="radio" id="np" name="fav_language" value="No Preference">
+  <label for="javascript">No Preference</label>
+</div>
+  <br/>
+
+  <div class="form-group">
+<p>Do you need Physiotherapist?</p>
+  <input type="radio" id="yes" name="yes" value="Yes">
+  <label for="html">Yes</label><br>
+  <input type="radio" id="no" name="no" value="No">
+  <label for="css">No</label><br>
+</div>
+  <br/>
+
+  <div class="form-group">
+<p>Select a package:</p>
+  <input type="radio" id="mt" name="500" value="500">
+  <label for="html">One-time Appointment(500 rupees)</label><br>
+  <input type="radio" id="ft" name="400" value="400">
+  <label for="css">Four sessions per week(400 rupees/session)</label><br>
+  <input type="radio" id="np" name="300" value="300">
+  <label for="javascript">Five sessions per week(300 rupees/session)</label>
+</div>
+  <br/>
+
+  <div class="form-group">
+        <label for="exampleInputname">Weeks</label>
+        <input type="text" class="form-control" formControlName="weeks" placeholder="Weeks">
+        <small class="form-text text-muted"
+            *ngIf="contactForm.controls.name.touched && contactForm.controls.name.errors?.required">
+            Please enter weeks.!
+        </small>
+    </div>
+<br/>
+    <div class="form-group">
+        <label for="exampleInputname">Amount in Rupees</label>
+        <input type="text" class="form-control" formControlName="amt" placeholder="Amount in Rupees">
+        <small class="form-text text-muted"
+            *ngIf="contactForm.controls.name.touched && contactForm.controls.name.errors?.required">
+            Please enter Amount in Rupees.!
+        </small>
+    </div>
+<br/>
+
+    <button type="submit" >Submit</button>
+
+</form>
